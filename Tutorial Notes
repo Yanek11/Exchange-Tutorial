@@ -40,16 +40,19 @@ Site 2 - Azure:
 Konfiguracja:
 
 1.
-Namecheap/DNS: 
-- dodanie domeny - kakaka.store
-
-2.
 Hetzner: 
 - utworzenie konta klienta
 - zamówienie serwera dedykowanego AX  (dysk SSD !)
 - zamówienie remote KVM console przez Support Request
 - dwa publiczne adresy IP
 - reverse DNS
+
+2.
+Namecheap/DNS: 
+- dodanie domeny - kakaka.store
+- rekord A: mail.kakaka.store	=> Hetzner public IP #1
+- rekord A: @		 	=> Hetzner public IP #1
+
 
 koszty:
 Server AX41 - € 35.60
