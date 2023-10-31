@@ -1,20 +1,7 @@
-
-
 Konfiguracja usług pocztowych (Exchange 2019), bramki email (Proxmox email gateway), firewall IPFire na hostingu Hetzner i VMware
-
 Domena: kktest.cfd, kktest.shop, kktest.site
-
 przykładowy email: kontakt@kktest.cfd
-
 Outlook client->Exchange Server->Proxmox->IPFire->Internet->email serwer-odbiorca
-
-koszty:
-Server AX41 - € 35.60
-IP1 - € 1.70
-IP2 - € 1.70
-1G Gbit NIC - € 2.20
-Dyski - 1 TB SSD SATA - nie NVMe ok € 10
-
 
 Infrastruktura:
 
@@ -35,8 +22,6 @@ ważne:
 - Windows Server image/template - użycie .vmdk
 
 
-
-
 Site 1 - (ESXI @Hetzner datacenter)
 	AD: DC01, DC02, DNS, DHCP
 	Exchange: EXCH01, EXCH02
@@ -50,16 +35,29 @@ EXCH-01: 1.1.1.
 Site 2 - Azure:
 
 
+
+
+Konfiguracja:
+
 1.
-Namecheap/DNS: domena publiczna
-kakaka.store
+Namecheap/DNS: 
+- dodanie domeny - kakaka.store
 
 2.
-- Hetzner: utworzenie konta klienta
-- Hetzner: zamówienie serwera dedykowanego AX  (dysk SSD !)
-- Hetzner: zamówienie remote KVM console przez Support Request
-- Hetzner: dwa publiczne adresy IP
-- Hetzner: reverse DNS
+Hetzner: 
+- utworzenie konta klienta
+- zamówienie serwera dedykowanego AX  (dysk SSD !)
+- zamówienie remote KVM console przez Support Request
+- dwa publiczne adresy IP
+- reverse DNS
+
+koszty:
+Server AX41 - € 35.60
+IP1 - € 1.70
+IP2 - € 1.70
+1G Gbit NIC - € 2.20
+Dyski - 1 TB SSD SATA - (not NVMe) ok € 10
+
 
 3.
 
