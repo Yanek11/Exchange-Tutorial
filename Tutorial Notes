@@ -1,0 +1,95 @@
+Konfiguracja usług pocztowych (Exchange 2019), bramki email (Proxmox email gateway), firewall IPFire na hostingu Hetzner i VMware
+
+Domena: kktest.cfd, kktest.shop, kktest.site
+
+przykładowy email: kontakt@kktest.cfd
+
+Outlook client->Exchange Server->Proxmox->IPFire->Internet->email serwer-odbiorca
+
+koszty:
+Server AX41 - € 35.60
+IP1 - € 1.70
+IP2 - € 1.70
+1G Gbit NIC - € 2.20
+Dyski - 1 TB SSD SATA - nie NVMe ok € 10
+
+
+Infrastruktura:
+
+1. Hosting: serwer fizyczny (Hetzner), hypervisor VMware ESXI
+2. Zdalny dostęp: SSH, mRemote, RDP
+3. IPFire firewall
+4. Windows Server 2019 - Active Directory, DNS, DHCP
+5. Exchange Server 2019
+6. Bramka email / email gateway: Proxmox
+7. Backup: Veeam
+
+
+ważne:
+- konfiguracja certyfikatów SSL na Exchange
+- konfiguracja DNS: przestrzenie nazw (namespace)/ URL services na Exchange
+- konfiguracja DNS: A, MX, CNAME, TXT
+- konfiguracja NAT na IPFire firewall
+- Windows Server image/template - użycie .vmdk
+
+
+
+
+Site 1 - (ESXI @Hetzner datacenter)
+	AD: DC01, DC02, DNS, DHCP
+	Exchange: EXCH01, EXCH02
+	Firewall/NAT: Linux IPFire - DMZ
+	Backup: Veeam. backup server
+	AV: Sophos?
+
+DC01: 1.1.1.15
+DC02: 1.1.1.17
+EXCH-01: 1.1.1.
+Site 2 - Azure:
+
+
+1.
+Namecheap/DNS: domena publiczna
+kakaka.store
+
+2.
+- Hetzner: utworzenie konta klienta
+- Hetzner: zamówienie serwera dedykowanego AX  (dysk SSD !)
+- Hetzner: zamówienie remote KVM console przez Support Request
+- Hetzner: dwa publiczne adresy IP
+- Hetzner: reverse DNS
+
+3.
+
+- Hetzner/VMware/ESXI/: instalacja i konfiguracja.
+    - laptop: ściągnięcie esxi ISO ze strony VMware
+    - upload ISO na serwer fizyczny AX41
+
+-
+
+ namecheap: domena
+
+1. Hetzner - hosting /VMware - virtualizacja
+- omówienie usług: server AX
+- reverse DNS
+- Vmware/ESXi: instalacja, konfiguracja
+	- ISO
+	- public IP #1 - management/web
+	- public IP #2 - VM traffic
+
+
+2. DNS
+- wybór domeny publicznej: kontakt@kakaka.store
+- Namecheap
+3. Azure
+
+
+
+Domain Controllers: 1 x AD site, 1 x Azure site
+Exchange 2019 - 1 x AD site , 1 x DR site
+VPN: S2S Azure <=> AD site
+1. Hetzner - konfiguracja
+Public IP1:
+Vmware management
+
+AD: kakaka.store
