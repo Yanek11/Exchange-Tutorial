@@ -40,11 +40,27 @@ Site 2 - Azure:
 Konfiguracja:
 
 1.
-Hetzner: 
-- utworzenie konta klienta
-- zamówienie serwera dedykowanego AX  (dysk SSD !)
+Hetzner:
+- utworzenie konta klienta. rejestracja - bez VPN/proxy
+- zamówienie serwera dedykowanego AX 41 
+	szybszy dysk: NVMe SSD - nie kompatybilne z VMWare, SATA SSD preferowane)
+	karta sieciowa: domyślnie Realtek 
+
+##################################
+Dear Client,
+
+We do not guarantee servers with specific NICs as we do not support ESXi in our servers by default. We can however offer to install additional NIC that should be supported by ESXi. If you wish to proceed please confirm the following additional monthly costs:
+
+-----------------%<-----------------
+1G NIC (Intel)     € 2.20 monthly excl. VAT
+----------------->%-----------------
+
+Kind regards 
+##################################
+
+
 - zamówienie remote KVM console przez Support Request
-- dwa publiczne adresy IP
+- dwa publiczne adresy IP: dodatkowy publiczny adres IP  
 - reverse DNS
 
 2.
@@ -52,6 +68,18 @@ Namecheap/DNS:
 - dodanie domeny - kakaka.store
 - rekord A: mail.kakaka.store	=> Hetzner public IP #1
 - rekord A: @		 	=> Hetzner public IP #1
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 koszty:
