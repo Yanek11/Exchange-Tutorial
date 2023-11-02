@@ -46,31 +46,20 @@ Hetzner:
 	szybszy dysk: NVMe SSD - nie kompatybilne z VMWare, SATA SSD preferowane)
 	karta sieciowa: domyślnie Realtek 
 
-##################################
-Dear Client,
-
-We do not guarantee servers with specific NICs as we do not support ESXi in our servers by default. We can however offer to install additional NIC that should be supported by ESXi. If you wish to proceed please confirm the following additional monthly costs:
-
------------------%<-----------------
-1G NIC (Intel)     € 2.20 monthly excl. VAT
------------------>%-----------------
-
-Kind regards 
-##################################
-
-
 - zamówienie remote KVM console przez Support Request
 
 	- VMware ESXi 6.7 ISO download 
 	- remote KVM console - RARITAN
 	- instalacja ESXi 6.7 via USB stick
 
-
-
-
-
 - dwa publiczne adresy IP: dodatkowy publiczny adres IP  
 - reverse DNS
+
+2.VMware / ESXi - konfiguracja:
+- firewall: dostęp adres IP 
+- root: zmiana hasła
+- utworzenie użytkownika do administracji: kk-admin
+- dostęp przez SSH / Putty
 
 2.
 Namecheap/DNS: 
