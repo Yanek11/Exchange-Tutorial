@@ -55,13 +55,39 @@ Hetzner:
 - dwa publiczne adresy IP: dodatkowy publiczny adres IP  
 - reverse DNS
 
-2.VMware / ESXi - konfiguracja:
-- firewall: dostęp adres IP 
+2.
+VMware / ESXi - konfiguracja:
+- firewall: dostęp adres IP
+	149.102.244.0/24
+	31.60.159.193/32
+	94.254.223.53/32
 - root: zmiana hasła
 - utworzenie użytkownika do administracji: kk-admin
 - dostęp przez SSH / Putty
+- SSL: nowy certyfikat - ZeroSSL
 
-2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.
 Namecheap/DNS: 
 - dodanie domeny - kakaka.store
 - rekord A: mail.kakaka.store	=> Hetzner public IP #1
