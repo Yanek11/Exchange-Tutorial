@@ -65,6 +65,8 @@ VMware / ESXi - konfiguracja:
 - utworzenie użytkownika do administracji: kk-admin
 - dostęp przez SSH / Putty
 - SSL: nowy certyfikat - ZeroSSL
+- instalacja Windows 2019, utworzenie template (.VMDK), sysprep
+	- vmware.kakaka.store
 
 
 
