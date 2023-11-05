@@ -64,13 +64,34 @@ VMware / ESXi - konfiguracja:
 - SSL: nowy certyfikat - ZeroSSL
 
 3. 
-Firewall, Windows 2019, zdalny dostęp
+
+Hetzner: 
+- reverse DNS (mail.kakaka.store) => bramka email Proxmox
+
+Namecheap DNS: 
+- A record: mail.kakaka.store => 65.109.39.251
+
+ESXI: 
+- vSwitch: WAN (external port group), LAN, DMZ
 - pliki ISO - kopiowanie / WinSCP
-- VMware Remote Console
-- IPFire: instalacja / konfiguracja
-- Windows Server 2019:
-	- 
-	- instalacja OS, 
+- VMware Remote Console / SSH (Putty)
+- IPFire: 
+	- przypisanie drugiego publicznego adresu IP / MAC
+	- instalacja i konfiguracja
+
+
+
+
+
+
+
+
+
+4. 
+Firewall, Windows 2019, zdalny dostęp
+
+
+- Windows Server 2019: instalacja OS 
 - mRemoteNG / Remote Desktop - zdalny dostęp/administracja
 - utworzenie Windows 2019 template / VMDK , sysprep
 	- 
