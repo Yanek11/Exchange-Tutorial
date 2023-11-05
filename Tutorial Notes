@@ -58,15 +58,22 @@ Hetzner:
 2.
 VMware / ESXi - konfiguracja:
 - firewall: dostęp adres IP
-	149.102.244.0/24
-	31.60.159.193/32
-	94.254.223.53/32
 - root: zmiana hasła
 - utworzenie użytkownika do administracji: kk-admin
 - dostęp przez SSH / Putty
 - SSL: nowy certyfikat - ZeroSSL
-- instalacja Windows 2019, utworzenie template (.VMDK), sysprep
-	- vmware.kakaka.store
+
+3. 
+Firewall, Windows 2019, zdalny dostęp
+- pliki ISO - kopiowanie / WinSCP
+- VMware Remote Console
+- IPFire: instalacja / konfiguracja
+- Windows Server 2019:
+	- 
+	- instalacja OS, 
+- mRemoteNG / Remote Desktop - zdalny dostęp/administracja
+- utworzenie Windows 2019 template / VMDK , sysprep
+	- 
 
 
 
